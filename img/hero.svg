@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- hero.svg — Ilustración temporal del paisaje cafetero; reemplazar por una foto real (img/hero.webp). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9B98F"/>
+      <stop offset="0.55" stop-color="#F3DCC0"/>
+      <stop offset="1" stop-color="#F6EFE3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1180" cy="300" r="110" fill="#F6D7A7"/>
+  <path d="M0 520 C220 400 380 430 560 470 C760 520 900 380 1120 400 C1300 420 1440 360 1600 390 L1600 900 L0 900 Z" fill="#8FA88A"/>
+  <path d="M0 600 C200 520 420 560 640 590 C860 620 1020 520 1240 540 C1400 555 1500 520 1600 530 L1600 900 L0 900 Z" fill="#5E8A62"/>
+  <path d="M0 700 C260 620 520 680 780 690 C1040 700 1260 620 1600 650 L1600 900 L0 900 Z" fill="#2F5D3A"/>
+  <g fill="none" stroke="#24492D" stroke-width="6" stroke-linecap="round" opacity="0.7">
+    <path d="M40 790 C400 740 800 780 1560 730"/>
+    <path d="M20 840 C420 790 820 830 1580 780"/>
+    <path d="M60 890 C440 840 840 880 1600 830"/>
+  </g>
+  <g fill="#3E6B47">
+    <path d="M300 520 l14 -120 14 120 z"/><path d="M330 525 l12 -100 12 100 z"/>
+    <path d="M980 470 l14 -130 14 130 z"/><path d="M1010 475 l11 -95 11 95 z"/>
+    <path d="M1420 430 l13 -115 13 115 z"/>
+  </g>
+</svg>

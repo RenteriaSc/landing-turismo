@@ -2,7 +2,7 @@
 
 Landing page bilingüe (español / inglés) que conecta a turistas extranjeros por WhatsApp con 3 emprendimientos turísticos del Eje Cafetero afectados por el terremoto del 10 de agosto de 2026.
 
-**Página pública:** https://renteriasc.github.io/landing-turismo/ *(se activa al publicar con GitHub Pages)*
+**Página pública:** https://renteriasc.github.io/landing-turismo/
 
 ## Problema que resuelve
 

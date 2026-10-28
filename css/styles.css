@@ -179,12 +179,61 @@ a {
   color: var(--color-white);
 }
 
+/* ---------- Mensaje del terremoto ---------- */
+
+.impact {
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-green-dark);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.impact__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.impact__text {
+  max-width: 60ch;
+  margin: 0 auto var(--space-md);
+  font-size: 0.95rem;
+}
+
+.impact__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  max-width: 720px;
+  margin: 0 auto var(--space-sm);
+  padding: 0;
+  list-style: none;
+}
+
+.impact__stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.impact__stats strong {
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  color: #F2A57A;
+}
+
+.impact__source {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
 /* ---------- Portada ---------- */
 
 .hero {
   display: flex;
   align-items: flex-end;
-  min-height: 82vh;
+  min-height: 70vh;
   padding: var(--space-xl) var(--space-md);
   background:
     linear-gradient(180deg, rgba(43, 36, 32, 0.1) 20%, rgba(43, 36, 32, 0.7) 100%),

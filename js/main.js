@@ -1,10 +1,12 @@
 // main.js — Pinta las tarjetas de los negocios y cambia el idioma de la página sin recargar.
-// Usa "textos" y "whatsappMessage" de i18n.js, y "negocios" de data.js.
+// Usa "textos" y "whatsappMessages" de i18n.js, y "negocios" de data.js.
 
 const SUPPORTED_LANGUAGES = ["es", "en"];
 const LANGUAGE_STORAGE_KEY = "trendtech-language";
 
 let currentLanguage = getInitialLanguage();
+// Idioma del mensaje de WhatsApp; es independiente del idioma de la página.
+let messageLanguage = "en";
 
 // Idioma guardado por el visitante; si no hay, el del navegador; si no es español, inglés.
 function getInitialLanguage() {
@@ -44,14 +46,26 @@ function translateStaticTexts() {
 }
 
 function updateLanguageButtons() {
-  document.querySelectorAll(".language-switch__button").forEach((button) => {
+  document.querySelectorAll(".top-bar .language-switch__button").forEach((button) => {
     const isActive = button.dataset.language === currentLanguage;
     button.setAttribute("aria-pressed", String(isActive));
   });
 }
 
 function buildWhatsappUrl(phoneNumber) {
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessages[messageLanguage])}`;
+}
+
+// Cambia el idioma del mensaje en todos los enlaces de WhatsApp sin volver a pintar las tarjetas
+// (así los mapas no se recargan).
+function setMessageLanguage(language) {
+  messageLanguage = language;
+  document.querySelectorAll("a[data-whatsapp]").forEach((link) => {
+    link.href = buildWhatsappUrl(link.dataset.whatsapp);
+  });
+  document.querySelectorAll(".message-language .language-switch__button").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.messageLanguage === messageLanguage));
+  });
 }
 
 function buildInstagramUrl(username) {
@@ -75,7 +89,7 @@ function renderGallery(business) {
 function renderSocialLinks(business) {
   const links = [];
   if (business.whatsapp) {
-    links.push(`<a class="social-link" href="${buildWhatsappUrl(business.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICONS.whatsapp}</a>`);
+    links.push(`<a class="social-link" href="${buildWhatsappUrl(business.whatsapp)}" data-whatsapp="${business.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICONS.whatsapp}</a>`);
   }
   if (business.instagram) {
     links.push(`<a class="social-link" href="${buildInstagramUrl(business.instagram)}" target="_blank" rel="noopener" aria-label="Instagram">${ICONS.instagram}</a>`);
@@ -91,9 +105,24 @@ function renderWhatsappButton(business) {
     return "";
   }
   return `
-    <a class="button button--whatsapp" href="${buildWhatsappUrl(business.whatsapp)}" target="_blank" rel="noopener">
+    <a class="button button--whatsapp" href="${buildWhatsappUrl(business.whatsapp)}" data-whatsapp="${business.whatsapp}" target="_blank" rel="noopener">
       ${ICONS.whatsapp}<span>${t("whatsappButton")}</span>
     </a>`;
+}
+
+// Selector "Idioma del mensaje: EN | ES" que va encima del botón de WhatsApp.
+function renderMessageLanguageSwitch(business) {
+  if (!business.whatsapp) {
+    return "";
+  }
+  const buttons = [["en", "English"], ["es", "Español"]].map(([language, label]) => `
+    <button class="language-switch__button" type="button" data-message-language="${language}"
+      aria-pressed="${language === messageLanguage}">${label}</button>`).join("");
+  return `
+    <div class="message-language">
+      <span>${t("messageLanguage")}</span>
+      <div class="language-switch" role="group" aria-label="${t("messageLanguage")}">${buttons}</div>
+    </div>`;
 }
 
 function renderBusinessCard(business) {
@@ -116,6 +145,7 @@ function renderBusinessCard(business) {
         ${renderSocialLinks(business)}
         <iframe class="business-card__map" src="${business.mapaEmbed}" title="${t("mapTitle")} ${business.nombre}"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        ${renderMessageLanguageSwitch(business)}
         <div class="business-card__actions">
           ${renderWhatsappButton(business)}
           <a class="button button--secondary" href="${business.mapaLink}" target="_blank" rel="noopener">
@@ -138,8 +168,16 @@ const ICONS = {
   check: `<svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" d="M4 12.5l5 5L20 6.5"/></svg>`
 };
 
-document.querySelectorAll(".language-switch__button").forEach((button) => {
+document.querySelectorAll(".top-bar .language-switch__button").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
+});
+
+// Las tarjetas se vuelven a pintar al cambiar de idioma, así que escuchamos los clics en la lista.
+document.getElementById("business-list").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-message-language]");
+  if (button) {
+    setMessageLanguage(button.dataset.messageLanguage);
+  }
 });
 
 setLanguage(currentLanguage);

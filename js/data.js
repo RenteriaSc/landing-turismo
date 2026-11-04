@@ -31,7 +31,13 @@ const negocios = [
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Salento%2C%20Quind%C3%ADo%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Salento%2C%20Quind%C3%ADo%2C%20Colombia",
-    fotos: []
+    fotos: [
+      {
+        src: "img/don-elias/salento.svg",
+        alt: { es: "Ilustración del Valle de Cocora en Salento, con palmas de cera y un cafetal", en: "Illustration of Cocora Valley in Salento, with wax palms and a coffee field" },
+        esReferencia: true
+      }
+    ]
   },
   {
     id: "la-divisa",
@@ -53,7 +59,13 @@ const negocios = [
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia",
-    fotos: []
+    fotos: [
+      {
+        src: "img/la-divisa/caicedonia.svg",
+        alt: { es: "Ilustración de un cafetal en Caicedonia con una carpa de camping y una fogata", en: "Illustration of a coffee farm in Caicedonia with a camping tent and a campfire" },
+        esReferencia: true
+      }
+    ]
   },
   {
     id: "alto-bonito",
@@ -74,6 +86,12 @@ const negocios = [
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Sevilla%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Sevilla%2C%20Valle%20del%20Cauca%2C%20Colombia",
-    fotos: []
+    fotos: [
+      {
+        src: "img/alto-bonito/sevilla.svg",
+        alt: { es: "Ilustración de una casa de finca con balcón y hamaca en Sevilla, Valle del Cauca", en: "Illustration of a farmhouse with a balcony and a hammock in Sevilla, Valle del Cauca" },
+        esReferencia: true
+      }
+    ]
   }
 ];

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <!-- sevilla.svg — Ilustración de referencia hecha con IA: casa de finca con balcones en Sevilla (Valle), "capital cafetera". -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A9CBE0"/>
+      <stop offset="1" stop-color="#F3E9D6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <!-- Vista del valle desde el mirador -->
+  <path d="M0 250 C160 210 300 240 440 215 C600 190 700 230 800 210 L800 600 L0 600 Z" fill="#9AB39A"/>
+  <path d="M0 300 C180 260 360 300 520 280 C660 262 740 290 800 280 L800 600 L0 600 Z" fill="#6E9672"/>
+  <path d="M0 360 C200 330 420 360 800 335 L800 600 L0 600 Z" fill="#4C7A4F"/>
+  <g fill="#3E6B47">
+    <circle cx="80" cy="345" r="22"/><circle cx="110" cy="338" r="26"/><circle cx="740" cy="328" r="24"/><circle cx="700" cy="335" r="20"/>
+  </g>
+  <!-- Casa de finca con corredor y balcón -->
+  <g>
+    <rect x="230" y="270" width="340" height="190" fill="#F6EFE3"/>
+    <path d="M200 275 L400 190 L600 275 Z" fill="#B5492F"/>
+    <path d="M200 275 L600 275 L600 285 L200 285 Z" fill="#8E3722"/>
+    <!-- Balcón del segundo piso -->
+    <rect x="230" y="345" width="340" height="10" fill="#2F5D3A"/>
+    <g stroke="#2F5D3A" stroke-width="5">
+      <line x1="250" y1="320" x2="250" y2="345"/><line x1="280" y1="320" x2="280" y2="345"/>
+      <line x1="310" y1="320" x2="310" y2="345"/><line x1="340" y1="320" x2="340" y2="345"/>
+      <line x1="460" y1="320" x2="460" y2="345"/><line x1="490" y1="320" x2="490" y2="345"/>
+      <line x1="520" y1="320" x2="520" y2="345"/><line x1="550" y1="320" x2="550" y2="345"/>
+    </g>
+    <rect x="230" y="316" width="340" height="6" fill="#2F5D3A"/>
+    <!-- Ventanas y puertas -->
+    <g fill="#2F5D3A">
+      <rect x="260" y="290" width="36" height="28"/><rect x="380" y="290" width="40" height="28"/><rect x="505" y="290" width="36" height="28"/>
+      <rect x="265" y="385" width="40" height="75"/><rect x="380" y="385" width="40" height="75"/><rect x="495" y="385" width="40" height="75"/>
+    </g>
+    <!-- Columnas del corredor -->
+    <g fill="#5A3B25">
+      <rect x="232" y="355" width="8" height="105"/><rect x="335" y="355" width="8" height="105"/>
+      <rect x="457" y="355" width="8" height="105"/><rect x="560" y="355" width="8" height="105"/>
+    </g>
+    <!-- Macetas con flores -->
+    <g>
+      <rect x="250" y="306" width="20" height="10" fill="#C56A3D"/><circle cx="255" cy="302" r="5" fill="#D9417A"/><circle cx="265" cy="302" r="5" fill="#F2B84B"/>
+      <rect x="530" y="306" width="20" height="10" fill="#C56A3D"/><circle cx="535" cy="302" r="5" fill="#D9417A"/><circle cx="545" cy="302" r="5" fill="#E8833A"/>
+    </g>
+    <!-- Hamaca en el corredor -->
+    <path d="M343 405 C370 440 430 440 457 405" fill="none" stroke="#C0392B" stroke-width="7"/>
+    <path d="M343 412 C370 446 430 446 457 412" fill="none" stroke="#F2B84B" stroke-width="5"/>
+  </g>
+  <!-- Patio y cafetal -->
+  <path d="M0 460 L800 460 L800 600 L0 600 Z" fill="#2F5D3A"/>
+  <path d="M330 460 L470 460 L540 600 L260 600 Z" fill="#B99A73"/>
+  <g fill="#24492D">
+    <ellipse cx="70" cy="500" rx="60" ry="30"/><ellipse cx="170" cy="540" rx="65" ry="34"/>
+    <ellipse cx="640" cy="535" rx="65" ry="34"/><ellipse cx="740" cy="495" rx="60" ry="30"/>
+  </g>
+  <g fill="#C0392B">
+    <circle cx="60" cy="495" r="5"/><circle cx="160" cy="535" r="5"/><circle cx="178" cy="545" r="5"/>
+    <circle cx="650" cy="530" r="5"/><circle cx="730" cy="490" r="5"/>
+  </g>
+</svg>

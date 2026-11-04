@@ -31,16 +31,15 @@ const textos = {
     moreInfo: "Para más información, escríbenos por:",
     contactPending: "Contacto disponible pronto.",
     whatsappButton: "Escribir por WhatsApp",
+    messageLanguage: "Idioma del mensaje:",
     directionsButton: "Cómo llegar",
     mapTitle: "Mapa de",
     photoPending: "Fotos próximamente",
     referenceImage: "Imagen de referencia",
 
-    aboutTitle: "Sobre el proyecto",
-    aboutText: "El terremoto del 10 de agosto de 2026 dejó a muchos pequeños negocios turísticos de la región sin visitantes. Cuando reservas directo, todo el pago queda en manos de la familia y ayudas a reactivar la zona.",
 
-    footerTeam: "Equipo: [Integrantes]",
-    footerCourse: "[Universidad] · [Materia] · 2026"
+    footerTeam: "Equipo: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
+    footerCourse: "Universidad EAN · Trend + Tech · 2026"
   },
 
   en: {
@@ -72,18 +71,21 @@ const textos = {
     moreInfo: "For more information, message us on:",
     contactPending: "Contact details coming soon.",
     whatsappButton: "Message on WhatsApp",
+    messageLanguage: "Message language:",
     directionsButton: "Get directions",
     mapTitle: "Map of",
     photoPending: "Photos coming soon",
     referenceImage: "Reference image",
 
-    aboutTitle: "About the project",
-    aboutText: "The August 10, 2026 earthquake left many small tourism businesses in the region without visitors. When you book directly, the whole payment stays with the family and helps the area recover.",
 
-    footerTeam: "Team: [Integrantes]",
-    footerCourse: "[Universidad] · [Materia] · 2026"
+    footerTeam: "Team: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
+    footerCourse: "Universidad EAN · Trend + Tech · 2026"
   }
 };
 
-// Mensaje que llega prellenado al WhatsApp del dueño (en inglés, como pide la guía).
-const whatsappMessage = "Hi! I found you on Trendtech and I'd like more information.";
+// Mensaje que llega prellenado al WhatsApp del dueño. El visitante elige el idioma en cada tarjeta;
+// por defecto va en inglés, como pide la guía.
+const whatsappMessages = {
+  en: "Hi! I found you on Trendtech and I'd like more information.",
+  es: "¡Hola! Los encontré en Trendtech y me gustaría recibir más información."
+};

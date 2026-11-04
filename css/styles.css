@@ -442,10 +442,24 @@ a {
   background: var(--color-cream);
 }
 
+.message-language {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+}
+
 .business-card__actions {
   display: grid;
   gap: var(--space-xs);
   margin-top: auto;
+}
+
+.message-language + .business-card__actions {
+  margin-top: 0;
 }
 
 /* ---------- Galería ---------- */
@@ -492,12 +506,7 @@ a {
   font-weight: 600;
 }
 
-/* ---------- Sobre el proyecto y pie ---------- */
-
-.about__text {
-  max-width: 60ch;
-  font-size: 1.1rem;
-}
+/* ---------- Pie ---------- */
 
 .footer {
   padding: var(--space-xl) var(--space-md);

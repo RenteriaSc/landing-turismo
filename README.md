@@ -50,6 +50,9 @@ Para cambiar los datos de un negocio solo se edita `js/data.js`.
 ## Integrantes del equipo
 
 - Sebastian Renteria Cruz
-- [Integrantes]
+- Michael Esteban Arciniegas Silva
+- Adrian Fernando Solano Estrada
+- Evans Jose Solís Muñoz
+- Duvia Daniela Giraldo Raigoza
 
-[Universidad] · [Materia] · 2026
+Universidad EAN · Trend + Tech · 2026

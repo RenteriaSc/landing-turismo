@@ -54,8 +54,8 @@ const negocios = [
       es: ["Tour de café orgánico, todos los días a las 11 a. m. (en español)", "Camping"],
       en: ["Organic coffee tour, daily at 11 a.m. (in Spanish)", "Camping"]
     },
-    // Pendiente: número de WhatsApp y redes sociales.
-    whatsapp: "",
+    // Pendiente: redes sociales.
+    whatsapp: "573229285903",
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia",

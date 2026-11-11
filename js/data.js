@@ -8,6 +8,8 @@
 //
 // Mapas: por ahora apuntan al municipio. Cuando llegue el pin exacto, reemplazar mapaEmbed por el
 // enlace de Google Maps → Compartir → Insertar un mapa, y mapaLink por el enlace del pin.
+//
+// safety: 2 o 3 frases cortas sobre el estado de la zona (ES y EN). Si se deja vacío ([]), el bloque no se muestra.
 
 const negocios = [
   {
@@ -26,6 +28,12 @@ const negocios = [
       en: ["Coffee tour"]
     },
     // Pendiente: verificar que el número siga activo.
+    // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
+    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    safety: {
+      es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
+      en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
+    },
     whatsapp: "573156061113",
     // Pendiente: confirmar el usuario exacto de Instagram.
     instagram: "",
@@ -55,6 +63,12 @@ const negocios = [
       en: ["Organic coffee tour, daily at 11 a.m. (in Spanish)", "Camping"]
     },
     // Pendiente: redes sociales.
+    // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
+    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    safety: {
+      es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
+      en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
+    },
     whatsapp: "573229285903",
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
@@ -81,6 +95,12 @@ const negocios = [
     servicios: {
       es: ["Alojamiento"],
       en: ["Accommodation"]
+    },
+    // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
+    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    safety: {
+      es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
+      en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
     whatsapp: "573112225937",
     instagram: "",

@@ -409,6 +409,49 @@ a {
   font-weight: 600;
 }
 
+/* Bloque "Estado de la zona": discreto, verde suave, sin competir con el botón de WhatsApp. */
+
+.safety {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid rgba(47, 93, 58, 0.25);
+  border-radius: 12px;
+  background: #EEF5EF;
+  color: var(--color-green-dark);
+}
+
+.safety__title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.safety__list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.safety__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.safety__list .icon {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--color-green);
+}
+
 .business-card__more-info {
   display: flex;
   align-items: center;

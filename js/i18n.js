@@ -37,6 +37,7 @@ const textos = {
     mapTitle: "Mapa de",
     photoPending: "Fotos próximamente",
     referenceImage: "Imagen de referencia",
+    safetyTitle: "Estado de la zona",
 
 
     footerTeam: "Equipo: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
@@ -77,6 +78,7 @@ const textos = {
     mapTitle: "Map of",
     photoPending: "Photos coming soon",
     referenceImage: "Reference image",
+    safetyTitle: "Safety",
 
 
     footerTeam: "Team: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",

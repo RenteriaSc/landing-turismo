@@ -69,7 +69,7 @@ const negocios = [
       es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
-    whatsapp: "573229285903",
+    whatsapp: "573113619486",
     instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia",

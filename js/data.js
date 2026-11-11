@@ -35,8 +35,6 @@ const negocios = [
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
     whatsapp: "573156061113",
-    // Pendiente: confirmar el usuario exacto de Instagram.
-    instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Salento%2C%20Quind%C3%ADo%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Salento%2C%20Quind%C3%ADo%2C%20Colombia",
     fotos: [
@@ -62,7 +60,6 @@ const negocios = [
       es: ["Tour de café orgánico, todos los días a las 11 a. m. (en español)", "Camping"],
       en: ["Organic coffee tour, daily at 11 a.m. (in Spanish)", "Camping"]
     },
-    // Pendiente: redes sociales.
     // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
     // Confirmado por el dueño (noviembre de 2026).
     safety: {
@@ -70,7 +67,6 @@ const negocios = [
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
     whatsapp: "573113619486",
-    instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia",
     fotos: [
@@ -103,7 +99,6 @@ const negocios = [
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
     whatsapp: "573112225937",
-    instagram: "",
     mapaEmbed: "https://maps.google.com/maps?q=Sevilla%2C%20Valle%20del%20Cauca%2C%20Colombia&z=13&output=embed",
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Sevilla%2C%20Valle%20del%20Cauca%2C%20Colombia",
     fotos: [

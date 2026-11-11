@@ -452,31 +452,6 @@ a {
   color: var(--color-green);
 }
 
-.business-card__more-info {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  font-size: 0.9rem;
-  color: var(--color-text-soft);
-}
-
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--touch-size);
-  height: var(--touch-size);
-  border-radius: 50%;
-  background: var(--color-cream);
-  color: var(--color-green);
-}
-
-.social-link:hover {
-  background: var(--color-green);
-  color: var(--color-white);
-}
-
 .business-card__map {
   width: 100%;
   height: 200px;

@@ -75,17 +75,44 @@ function setMessageLanguage(language) {
   });
 }
 
-// Galería de fotos que se desliza con el dedo. Sin fotos, muestra un recuadro de espera.
+// Galería de fotos que se desliza con el dedo o con las flechas. Sin fotos, muestra un recuadro de espera.
 function renderGallery(business) {
   if (business.fotos.length === 0) {
     return `<div class="gallery gallery--empty"><span>${t("photoPending")}</span></div>`;
   }
   const photos = business.fotos.map((photo) => `
     <figure class="gallery__item">
-      <img src="${photo.src}" alt="${photo.alt[currentLanguage]}" width="800" height="600" loading="lazy">
+      <img src="${photo.src}" alt="${photo.alt[currentLanguage]}" width="800" height="600" loading="lazy"
+        ${photo.posicion ? `style="object-position: ${photo.posicion}"` : ""}>
       ${photo.esReferencia ? `<figcaption class="gallery__label">${t("referenceImage")}</figcaption>` : ""}
     </figure>`).join("");
-  return `<div class="gallery">${photos}</div>`;
+  if (business.fotos.length === 1) {
+    return `<div class="gallery">${photos}</div>`;
+  }
+  return `
+    <div class="gallery-wrap">
+      <div class="gallery">${photos}</div>
+      <button class="gallery__arrow gallery__arrow--prev" type="button" data-gallery-step="-1" aria-label="${t("previousPhoto")}" disabled>${ICONS.chevronLeft}</button>
+      <button class="gallery__arrow gallery__arrow--next" type="button" data-gallery-step="1" aria-label="${t("nextPhoto")}">${ICONS.chevronRight}</button>
+    </div>`;
+}
+
+// Mueve la galería una foto a la izquierda o a la derecha.
+function moveGallery(arrow) {
+  const gallery = arrow.closest(".gallery-wrap").querySelector(".gallery");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  gallery.scrollBy({ left: gallery.clientWidth * Number(arrow.dataset.galleryStep), behavior: reduceMotion ? "auto" : "smooth" });
+}
+
+// Desactiva la flecha izquierda en la primera foto y la derecha en la última.
+function updateGalleryArrows(gallery) {
+  const wrap = gallery.closest(".gallery-wrap");
+  if (!wrap) {
+    return;
+  }
+  const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+  wrap.querySelector(".gallery__arrow--prev").disabled = gallery.scrollLeft <= 1;
+  wrap.querySelector(".gallery__arrow--next").disabled = gallery.scrollLeft >= maxScroll - 1;
 }
 
 function renderWhatsappButton(business) {
@@ -167,6 +194,8 @@ const ICONS = {
   whatsapp: `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3z"/></svg>`,
   pin: `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>`,
   shield: `<svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg>`,
+  chevronLeft: `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>`,
+  chevronRight: `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>`,
   check: `<svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" d="M4 12.5l5 5L20 6.5"/></svg>`
 };
 
@@ -187,7 +216,18 @@ document.getElementById("business-list").addEventListener("click", (event) => {
   if (button) {
     setMessageLanguage(button.dataset.messageLanguage);
   }
+  const arrow = event.target.closest("[data-gallery-step]");
+  if (arrow) {
+    moveGallery(arrow);
+  }
 });
+
+// "scroll" no burbujea, por eso se escucha en fase de captura para todas las galerías.
+document.getElementById("business-list").addEventListener("scroll", (event) => {
+  if (event.target.classList && event.target.classList.contains("gallery")) {
+    updateGalleryArrows(event.target);
+  }
+}, true);
 
 setupJoinButton();
 setLanguage(currentLanguage);

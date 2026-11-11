@@ -35,6 +35,8 @@ const textos = {
     mapTitle: "Mapa de",
     photoPending: "Fotos próximamente",
     referenceImage: "Imagen de referencia",
+    previousPhoto: "Foto anterior",
+    nextPhoto: "Foto siguiente",
     safetyTitle: "Estado de la zona",
 
     joinTitle: "¿Quieres que tu negocio sea parte de la página?",
@@ -78,6 +80,8 @@ const textos = {
     mapTitle: "Map of",
     photoPending: "Photos coming soon",
     referenceImage: "Reference image",
+    previousPhoto: "Previous photo",
+    nextPhoto: "Next photo",
     safetyTitle: "Safety",
 
     joinTitle: "Want your business to be part of this page?",

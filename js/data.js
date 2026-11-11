@@ -5,6 +5,8 @@
 // Cómo agregar una foto: guardarla en img/<id>/ (WebP, máximo 300 KB) y añadirla a "fotos":
 //   { src: "img/alto-bonito/1.webp", alt: { es: "...", en: "..." }, esReferencia: false }
 // Si la foto fue generada con IA, poner esReferencia: true (muestra la etiqueta "Imagen de referencia").
+// Opcional: posicion: "center top" para elegir qué parte de la foto se ve cuando se recorta.
+// Con 2 o más fotos, la galería muestra flechas para pasar de una a otra.
 //
 // Mapas: por ahora apuntan al municipio. Cuando llegue el pin exacto, reemplazar mapaEmbed por el
 // enlace de Google Maps → Compartir → Insertar un mapa, y mapaLink por el enlace del pin.
@@ -39,9 +41,15 @@ const negocios = [
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Salento%2C%20Quind%C3%ADo%2C%20Colombia",
     fotos: [
       {
-        src: "img/don-elias/salento.svg",
-        alt: { es: "Ilustración del Valle de Cocora en Salento, con palmas de cera y un cafetal", en: "Illustration of Cocora Valley in Salento, with wax palms and a coffee field" },
-        esReferencia: true
+        src: "img/don-elias/1.webp",
+        alt: { es: "Casa de la finca con techo de teja, barandas naranjas y banderas de colores", en: "Farmhouse with a tiled roof, orange railings and colorful flags" },
+        esReferencia: false
+      },
+      {
+        src: "img/don-elias/2.webp",
+        alt: { es: "Don Elías, con sombrero y poncho, sirviendo café junto a costales de café", en: "Don Elías, wearing a hat and poncho, pouring coffee next to coffee sacks" },
+        esReferencia: false,
+        posicion: "center 20%"
       }
     ]
   },

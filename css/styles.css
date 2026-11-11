@@ -514,6 +514,56 @@ a {
   font-size: 0.75rem;
 }
 
+/* Flechas de la galería (solo cuando hay 2 o más fotos). */
+
+.gallery-wrap {
+  position: relative;
+}
+
+.gallery-wrap .gallery {
+  scrollbar-width: none;
+}
+
+.gallery-wrap .gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-size);
+  height: var(--touch-size);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-green-dark);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.gallery__arrow:hover {
+  background: var(--color-white);
+}
+
+.gallery__arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery__arrow--prev {
+  left: var(--space-xs);
+}
+
+.gallery__arrow--next {
+  right: var(--space-xs);
+}
+
 .gallery--empty {
   align-items: center;
   justify-content: center;
@@ -614,7 +664,8 @@ a {
   }
 
   .button,
-  .business-card {
+  .business-card,
+  .gallery__arrow {
     transition: none;
   }
 }

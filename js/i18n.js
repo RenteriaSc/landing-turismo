@@ -39,9 +39,9 @@ const textos = {
     referenceImage: "Imagen de referencia",
     safetyTitle: "Estado de la zona",
 
-    joinTitle: "¿Tienes un negocio turístico? Únete",
-    joinText: "Es gratis: muestra tu finca o tour en español e inglés y recibe mensajes directos de turistas extranjeros.",
-    joinButton: "Quiero unirme",
+    joinTitle: "¿Quieres que tu negocio sea parte de la página?",
+    joinText: "Ponte en contacto con nosotros por WhatsApp. Es gratis y te conecta directo con turistas extranjeros.",
+    joinButton: "Contáctanos por WhatsApp",
 
 
     footerTeam: "Equipo: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
@@ -84,9 +84,9 @@ const textos = {
     referenceImage: "Reference image",
     safetyTitle: "Safety",
 
-    joinTitle: "Do you run a tourism business? Join us",
-    joinText: "It's free: show your farm or tour in English and Spanish and get messages straight from international travelers.",
-    joinButton: "I want to join",
+    joinTitle: "Want your business to be part of this page?",
+    joinText: "Get in touch with us on WhatsApp. It's free and connects you directly with international travelers.",
+    joinButton: "Contact us on WhatsApp",
 
 
     footerTeam: "Team: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
@@ -101,5 +101,5 @@ const whatsappMessages = {
   es: "¡Hola! Los encontré en Trendtech y me gustaría recibir más información."
 };
 
-// Mensaje prellenado del botón "Únete" cuando todavía no hay Google Form (lo recibe el equipo).
-const joinWhatsappMessage = "Hola, tengo un negocio turístico y quiero unirme a la página";
+// Mensaje prellenado del botón "Contáctanos" (lo recibe el equipo; va en español porque escriben los dueños).
+const joinWhatsappMessage = "¡Hola! Estoy interesado en que mi establecimiento aparezca en la página de Trendtech. ¿Me pueden dar más información?";

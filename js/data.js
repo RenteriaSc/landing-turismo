@@ -29,7 +29,7 @@ const negocios = [
     },
     // Pendiente: verificar que el número siga activo.
     // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
-    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    // Confirmado por el dueño (noviembre de 2026).
     safety: {
       es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
@@ -64,7 +64,7 @@ const negocios = [
     },
     // Pendiente: redes sociales.
     // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
-    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    // Confirmado por el dueño (noviembre de 2026).
     safety: {
       es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
@@ -97,7 +97,7 @@ const negocios = [
       en: ["Accommodation"]
     },
     // Estado de la zona después del sismo (bloque "Estado de la zona" / "Safety" de la tarjeta).
-    // TODO: confirmar con el dueño que cada ítem sigue siendo cierto antes de publicar.
+    // Confirmado por el dueño (noviembre de 2026).
     safety: {
       es: ["Vía de acceso habilitada", "Finca revisada y en perfecto estado después del sismo", "Zona verificada y segura para recibir visitantes"],
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
@@ -116,9 +116,5 @@ const negocios = [
   }
 ];
 
-// Sección "¿Tienes un negocio turístico? Únete".
-// TODO: pegar link real del Google Form (por ejemplo "https://forms.gle/AbCdEf123").
-// Mientras esté vacío, el botón abre WhatsApp con JOIN_WHATSAPP_NUMBER y un mensaje prellenado.
-const JOIN_FORM_URL = "";
-// TODO: poner el número de WhatsApp del equipo que recibe los registros (formato 57XXXXXXXXXX).
-const JOIN_WHATSAPP_NUMBER = "";
+// Sección "¿Quieres ser parte de la página?": WhatsApp del equipo que recibe a los negocios nuevos.
+const JOIN_WHATSAPP_NUMBER = "573229285903";

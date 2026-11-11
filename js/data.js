@@ -37,8 +37,9 @@ const negocios = [
       en: ["Access road open", "Property inspected and in perfect condition after the earthquake", "Area verified and safe to welcome visitors"]
     },
     whatsapp: "573156061113",
-    mapaEmbed: "https://maps.google.com/maps?q=Salento%2C%20Quind%C3%ADo%2C%20Colombia&z=13&output=embed",
-    mapaLink: "https://www.google.com/maps/search/?api=1&query=Salento%2C%20Quind%C3%ADo%2C%20Colombia",
+    // Dirección: Vereda Palestina Km 4, Canaán, Quindío 631028.
+    mapaEmbed: "https://maps.google.com/maps?q=Vereda%20Palestina%20Km%204%2C%20Cana%C3%A1n%2C%20Quind%C3%ADo%20631028%2C%20Colombia&z=15&output=embed",
+    mapaLink: "https://www.google.com/maps/search/?api=1&query=Vereda%20Palestina%20Km%204%2C%20Cana%C3%A1n%2C%20Quind%C3%ADo%20631028%2C%20Colombia",
     fotos: [
       {
         src: "img/don-elias/1.webp",

@@ -39,6 +39,10 @@ const textos = {
     referenceImage: "Imagen de referencia",
     safetyTitle: "Estado de la zona",
 
+    joinTitle: "¿Tienes un negocio turístico? Únete",
+    joinText: "Es gratis: muestra tu finca o tour en español e inglés y recibe mensajes directos de turistas extranjeros.",
+    joinButton: "Quiero unirme",
+
 
     footerTeam: "Equipo: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
     footerCourse: "Universidad EAN · Trend + Tech · 2026"
@@ -80,6 +84,10 @@ const textos = {
     referenceImage: "Reference image",
     safetyTitle: "Safety",
 
+    joinTitle: "Do you run a tourism business? Join us",
+    joinText: "It's free: show your farm or tour in English and Spanish and get messages straight from international travelers.",
+    joinButton: "I want to join",
+
 
     footerTeam: "Team: Sebastian Renteria Cruz, Michael Esteban Arciniegas Silva, Adrian Fernando Solano Estrada, Evans Jose Solís Muñoz, Duvia Daniela Giraldo Raigoza",
     footerCourse: "Universidad EAN · Trend + Tech · 2026"
@@ -92,3 +100,6 @@ const whatsappMessages = {
   en: "Hi! I found you on Trendtech and I'd like more information.",
   es: "¡Hola! Los encontré en Trendtech y me gustaría recibir más información."
 };
+
+// Mensaje prellenado del botón "Únete" cuando todavía no hay Google Form (lo recibe el equipo).
+const joinWhatsappMessage = "Hola, tengo un negocio turístico y quiero unirme a la página";

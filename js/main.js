@@ -46,7 +46,17 @@ function translateStaticTexts() {
 }
 
 function updateLanguageButtons() {
-  document.querySelectorAll(".top-bar .language-switch__button").forEach((button) => {
+  // Link del botón "Únete": el Google Form si ya está configurado; si no, WhatsApp con mensaje prellenado.
+function setupJoinButton() {
+  const button = document.getElementById("join-button");
+  if (JOIN_FORM_URL) {
+    button.href = JOIN_FORM_URL;
+  } else {
+    button.href = `https://wa.me/${JOIN_WHATSAPP_NUMBER}?text=${encodeURIComponent(joinWhatsappMessage)}`;
+  }
+}
+
+document.querySelectorAll(".top-bar .language-switch__button").forEach((button) => {
     const isActive = button.dataset.language === currentLanguage;
     button.setAttribute("aria-pressed", String(isActive));
   });
@@ -184,6 +194,16 @@ const ICONS = {
   check: `<svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" d="M4 12.5l5 5L20 6.5"/></svg>`
 };
 
+// Link del botón "Únete": el Google Form si ya está configurado; si no, WhatsApp con mensaje prellenado.
+function setupJoinButton() {
+  const button = document.getElementById("join-button");
+  if (JOIN_FORM_URL) {
+    button.href = JOIN_FORM_URL;
+  } else {
+    button.href = `https://wa.me/${JOIN_WHATSAPP_NUMBER}?text=${encodeURIComponent(joinWhatsappMessage)}`;
+  }
+}
+
 document.querySelectorAll(".top-bar .language-switch__button").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
@@ -196,4 +216,5 @@ document.getElementById("business-list").addEventListener("click", (event) => {
   }
 });
 
+setupJoinButton();
 setLanguage(currentLanguage);

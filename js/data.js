@@ -115,3 +115,10 @@ const negocios = [
     ]
   }
 ];
+
+// Sección "¿Tienes un negocio turístico? Únete".
+// TODO: pegar link real del Google Form (por ejemplo "https://forms.gle/AbCdEf123").
+// Mientras esté vacío, el botón abre WhatsApp con JOIN_WHATSAPP_NUMBER y un mensaje prellenado.
+const JOIN_FORM_URL = "";
+// TODO: poner el número de WhatsApp del equipo que recibe los registros (formato 57XXXXXXXXXX).
+const JOIN_WHATSAPP_NUMBER = "";

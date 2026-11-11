@@ -549,6 +549,40 @@ a {
   font-weight: 600;
 }
 
+/* ---------- Únete (registro de nuevos negocios) ---------- */
+
+.join {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--color-white);
+  border-top: 1px solid rgba(43, 36, 32, 0.08);
+  text-align: center;
+}
+
+.join__content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.join__title {
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  color: var(--color-green);
+  margin-bottom: var(--space-sm);
+}
+
+.join__text {
+  margin: 0 0 var(--space-lg);
+  color: var(--color-text-soft);
+}
+
+/* Tono más oscuro para que el texto blanco del botón cumpla contraste AA (5.2:1). */
+.join .button--primary {
+  background: var(--color-terracotta-dark);
+}
+
+.join .button--primary:hover {
+  background: var(--color-green-dark);
+}
+
 /* ---------- Pie ---------- */
 
 .footer {

@@ -121,9 +121,15 @@ const negocios = [
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Sevilla%2C%20Valle%20del%20Cauca%2C%20Colombia",
     fotos: [
       {
-        src: "img/alto-bonito/sevilla.svg",
-        alt: { es: "Ilustración de una casa de finca con balcón y hamaca en Sevilla, Valle del Cauca", en: "Illustration of a farmhouse with a balcony and a hammock in Sevilla, Valle del Cauca" },
-        esReferencia: true
+        src: "img/alto-bonito/1.webp",
+        alt: { es: "Casa blanca de la finca con matas en materas y un arcoíris en el cielo", en: "White farmhouse with potted plants and a rainbow in the sky" },
+        esReferencia: false,
+        posicion: "center bottom"
+      },
+      {
+        src: "img/alto-bonito/2.webp",
+        alt: { es: "Piscina sobre pasto sintético, rodeada de cultivos y faroles", en: "Pool on artificial grass, surrounded by crops and lanterns" },
+        esReferencia: false
       }
     ]
   }

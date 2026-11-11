@@ -5,13 +5,14 @@ const textos = {
   es: {
     impactTitle: "¿Por qué existe esta página?",
     impactText: "El terremoto del 10 de agosto de 2026 golpeó el Eje Cafetero. Muchas familias que viven del turismo se quedaron sin visitantes. Reservar directo con ellas las ayuda a salir adelante.",
-    impactStat1Number: "237.000+",
+    impactStat1Number: "238.000+",
     impactStat1Label: "viviendas destruidas o dañadas",
+    // TODO: confirmar esta cifra con el reporte de la UNGRD (venía de France 24).
     impactStat2Number: "314.000",
     impactStat2Label: "personas damnificadas en el Valle del Cauca",
-    impactStat3Number: "468",
-    impactStat3Label: "vías afectadas",
-    impactSource: "Fuente: France 24, septiembre de 2026",
+    impactStat3Number: "750+",
+    impactStat3Label: "vías, puentes y acueductos afectados",
+    impactSource: "Fuente: UNGRD, 10 de septiembre de 2026",
 
     heroEyebrow: "Eje Cafetero, Colombia",
     heroTitle: "Visita la región cafetera de Colombia — reserva directo con familias locales",
@@ -45,13 +46,13 @@ const textos = {
   en: {
     impactTitle: "Why does this page exist?",
     impactText: "The August 10, 2026 earthquake hit Colombia's Coffee Region. Many families who live from tourism lost their visitors. Booking directly with them helps them get back on their feet.",
-    impactStat1Number: "237,000+",
+    impactStat1Number: "238,000+",
     impactStat1Label: "homes destroyed or damaged",
     impactStat2Number: "314,000",
     impactStat2Label: "people affected in Valle del Cauca",
-    impactStat3Number: "468",
-    impactStat3Label: "roads damaged",
-    impactSource: "Source: France 24, September 2026",
+    impactStat3Number: "750+",
+    impactStat3Label: "roads, bridges and water systems affected",
+    impactSource: "Source: UNGRD, September 10, 2026",
 
     heroEyebrow: "Coffee Region, Colombia",
     heroTitle: "Visit Colombia's Coffee Region — book directly with local families",

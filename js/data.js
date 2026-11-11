@@ -79,9 +79,19 @@ const negocios = [
     mapaLink: "https://www.google.com/maps/search/?api=1&query=Caicedonia%2C%20Valle%20del%20Cauca%2C%20Colombia",
     fotos: [
       {
-        src: "img/la-divisa/caicedonia.svg",
-        alt: { es: "Ilustración de un cafetal en Caicedonia con una carpa de camping y una fogata", en: "Illustration of a coffee farm in Caicedonia with a camping tent and a campfire" },
-        esReferencia: true
+        src: "img/la-divisa/1.webp",
+        alt: { es: "Entrada de la Finca La Divisa con su letrero de madera, un seto verde y árboles grandes", en: "Entrance to Finca La Divisa with its wooden sign, a green hedge and tall trees" },
+        esReferencia: false
+      },
+      {
+        src: "img/la-divisa/2.webp",
+        alt: { es: "Terraza techada con mesa de billar, mesa de ping-pong y vista a los cafetales", en: "Covered terrace with a pool table, a ping-pong table and a view of the coffee fields" },
+        esReferencia: false
+      },
+      {
+        src: "img/la-divisa/3.webp",
+        alt: { es: "Plato servido con limón exprimido y una salsa al lado", en: "A served dish with a squeeze of lime and a dipping sauce" },
+        esReferencia: false
       }
     ]
   },
